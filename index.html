@@ -3,77 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Echo Vision Films | Carrot</title>
+  <title>Echo Vision Films – Independent Production Company</title>
   <!-- Import a clean sans-serif font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Base styling to achieve a minimalist, cinematic look */
+    /* Base styling for a modern, cinematic aesthetic */
+    :root {
+      --primary-color: #e76f51;
+      --secondary-color: #1d1a27;
+      --text-color: #f5f5f5;
+      --muted-color: #888;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #000;
-      color: #fff;
+      color: var(--text-color);
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
     section {
       padding: 80px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
-    header {
-      position: relative;
-      text-align: center;
-    }
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: brightness(70%);
-    }
-    header .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 20px;
-    }
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-      letter-spacing: 4px;
-      font-weight: 700;
-    }
-    header p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-top: 20px;
-    }
     h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 36px;
+      margin-bottom: 40px;
       border-bottom: 1px solid #333;
       padding-bottom: 10px;
+      letter-spacing: 1px;
     }
     h3 {
       margin: 0 0 10px;
       font-size: 24px;
     }
+    /* Hero section */
+    header.hero {
+      height: 90vh;
+      background-image: url('assets/hero-bg.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-color);
+    }
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(2px);
+    }
+    header.hero .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    header.hero h1 {
+      font-size: 64px;
+      margin: 0;
+      letter-spacing: 4px;
+      font-weight: 700;
+    }
+    header.hero p {
+      font-size: 20px;
+      margin: 20px auto;
+      max-width: 650px;
+      color: #ccc;
+    }
+    .hero-buttons {
+      margin-top: 30px;
+    }
+    .hero-buttons .btn {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 28px;
+      border: 1px solid var(--primary-color);
+      border-radius: 4px;
+      color: var(--text-color);
+      background-color: transparent;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .hero-buttons .btn:hover {
+      background-color: var(--primary-color);
+      color: #000;
+    }
+    /* Grid & card styling */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 40px;
     }
     .card {
-      background-color: #111;
+      background-color: var(--secondary-color);
       border-radius: 8px;
       overflow: hidden;
       text-align: left;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
     .card img {
       width: 100%;
@@ -83,16 +123,47 @@
     .card .content {
       padding: 20px;
     }
+    .card .content h3 {
+      color: var(--primary-color);
+    }
+    .card .content p a {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+    /* Services section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .service {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .service:hover {
+      transform: translateY(-4px);
+    }
+    .service h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-size: 22px;
+    }
     footer {
-      background-color: #111;
+      background-color: var(--secondary-color);
       padding: 40px 20px;
       text-align: center;
       font-size: 14px;
-      color: #888;
+      color: var(--muted-color);
     }
     a {
-      color: #f36;
+      color: var(--primary-color);
       text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     .press-section p,
     .press-section li {
@@ -102,33 +173,46 @@
 </head>
 <body>
 
-  <!-- Hero section with poster and overlay text -->
-  <header>
-    <img src="assets/carrot-abstract.png" alt="Carrot poster">
-    <div class="overlay">
-      <h1>CARROT</h1>
-      <p>A tense encounter between ambition and vulnerability unravels into a chilling power play, where control becomes the highest currency.</p>
+  <!-- Hero section promoting the production company -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Echo Vision Films</h1>
+      <p>Illuminating powerful narratives and championing voices that challenge convention.</p>
+      <div class="hero-buttons">
+        <a href="#films" class="btn">Our Films</a>
+        <a href="#about" class="btn">About Us</a>
+      </div>
     </div>
   </header>
 
-  <!-- Selected Work -->
-  <section id="work">
-    <h2>Selected Work</h2>
+  <!-- Our Films -->
+  <section id="films">
+    <h2>Our Films</h2>
     <div class="grid">
+      <!-- Carrot film card -->
       <div class="card">
-        <img src="assets/carrot-abstract.png" alt="Carrot">
+        <img src="assets/carrot-abstract.png" alt="Carrot poster">
         <div class="content">
-          <h3>Carrot</h3>
+          <h3>Carrot (2025)</h3>
           <p>As Raj navigates the dynamics of his office, a quiet tension simmers beneath the surface. <em>Carrot</em> unfolds with precision, gradually revealing the cracks between appearance and reality.</p>
+          <p><a href="#press">View press kit</a></p>
         </div>
       </div>
-      <!-- Additional project cards can be added here -->
+      <!-- Placeholder card for upcoming projects -->
+      <div class="card">
+        <img src="assets/placeholder.png" alt="Upcoming project" />
+        <div class="content">
+          <h3>Upcoming Project</h3>
+          <p>Our next narrative film is currently in development. Stay tuned for a story that dives even deeper into the human condition and the power dynamics that shape it.</p>
+          <p><em>Coming soon</em></p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Press Kit Section -->
   <section id="press" class="press-section">
-    <h2>Press Kit</h2>
+    <h2>Carrot Press Kit</h2>
     <p><strong>Logline</strong><br>
       A tense encounter between ambition and vulnerability unravels into a chilling power play, where control becomes the highest currency.
     </p>
@@ -164,8 +248,8 @@
 
   <!-- Journal placeholder -->
   <section id="journal">
-    <h2>Journal</h2>
-    <p>Coming soon.</p>
+    <h2>News & Journal</h2>
+    <p>Stories from behind the scenes, insights from our team, and updates on upcoming projects are coming soon.</p>
   </section>
 
   <!-- About Section -->
@@ -174,6 +258,25 @@
     <p><strong>Abhinav Gopisetty</strong>, the founder of Echo Vision Films, is a South Asian actor known for his work in the film <em>Carrot</em> (2025) and the television series <em>Matlock</em> (2024). Born and raised in Hyderabad, India, and now based in Los Angeles, Abhinav blends charm, emotional depth, and humor into thoughtful performances. Learn more on <a href="https://www.imdb.com/name/nm14101510/">IMDb</a>.</p>
     <p>Echo Vision Films produces bold, provocative cinema that explores the intersection of power, ambition, and vulnerability. Our mission is to amplify voices and stories that challenge convention and linger long after the credits roll.</p>
     <p>Beyond our flagship projects, Echo Vision Films provides end-to-end production services —including script development, casting, production management, cinematography, and post‑production — for narrative films, television and commercial content. We partner with visionary artists and align our work with values of authenticity, innovation and cinematic excellence.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Script Development</h3>
+        <p>From concept to final draft, we collaborate with writers to hone compelling narratives and unforgettable characters.</p>
+      </div>
+      <div class="service">
+        <h3>Production Management</h3>
+        <p>Our experienced team oversees logistics, budgeting and scheduling to ensure every project runs smoothly from pre‑production to wrap.</p>
+      </div>
+      <div class="service">
+        <h3>Post‑Production</h3>
+        <p>We deliver seamless edits, sound design and color grading, bringing films to life with cinematic polish.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
