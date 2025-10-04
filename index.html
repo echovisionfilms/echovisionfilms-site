@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo Vision Films | Carrot</title>
+  <!-- Import a clean sans-serif font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base styling to achieve a minimalist, cinematic look */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      position: relative;
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(70%);
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card .content {
+      padding: 20px;
+    }
+    footer {
+      background-color: #111;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+    a {
+      color: #f36;
+      text-decoration: none;
+    }
+    .press-section p,
+    .press-section li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero section with poster and overlay text -->
+  <header>
+    <img src="assets/carrot-poster.png" alt="Carrot poster">
+    <div class="overlay">
+      <h1>CARROT</h1>
+      <p>A tense encounter between ambition and vulnerability unravels into a chilling power play, where control becomes the highest currency.</p>
+    </div>
+  </header>
+
+  <!-- Selected Work -->
+  <section id="work">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/carrot-poster.png" alt="Carrot">
+        <div class="content">
+          <h3>Carrot</h3>
+          <p>As Raj navigates the dynamics of his office, a quiet tension simmers beneath the surface. <em>Carrot</em> unfolds with precision, gradually revealing the cracks between appearance and reality.</p>
+        </div>
+      </div>
+      <!-- Additional project cards can be added here -->
+    </div>
+  </section>
+
+  <!-- Press Kit Section -->
+  <section id="press" class="press-section">
+    <h2>Press Kit</h2>
+    <p><strong>Logline</strong><br>
+      A tense encounter between ambition and vulnerability unravels into a chilling power play, where control becomes the highest currency.
+    </p>
+    <p><strong>Synopsis</strong><br>
+      As Raj navigates the dynamics of his office, a quiet tension simmers beneath the surface. <em>Carrot</em> unfolds with precision, gradually revealing the cracks between appearance and reality. This suspenseful short film explores how power, ambition, and control manifest in unexpected ways.
+    </p>
+    <p><strong>Credits</strong><br>
+      Director: Abhinav Gopisetty<br>
+      Writers: Abhinav Gopisetty, Jenny King<br>
+      Producer: Rob Margolies<br>
+      Cinematographer: Oleg Zayanov<br>
+      Editor: Oleg Zayanov<br>
+      Casting Director: Rob Margolies<br>
+      Production Company: Echo Vision Films
+    </p>
+    <p><strong>Cast</strong><br>
+      Abhinav Gopisetty as Raj (<em>Matlock</em>, 2024)<br>
+      Tommi Rose as Emma (<em>Outer Banks</em>, 2020)<br>
+      Eddie Shin as John (<em>Alexa &amp; Katie</em>, 2018)<br>
+      Ashley BeLoat as Carrot (<em>The Tragedy of Senator Abe Froeman</em>, 2024)
+    </p>
+    <p><strong>Tech Specs</strong><br>
+      Runtime: 8 minutes<br>
+      Year: 2025<br>
+      Country: USA<br>
+      Language: English<br>
+      Format: Short Film
+    </p>
+    <p><strong>Contact</strong><br>
+      Echo Vision Films<br>
+      <a href="mailto:press@echovisionfilms.com">press@echovisionfilms.com</a><br>
+      <a href="https://echovisionfilms.com">echovisionfilms.com</a>
+    </p>
+  </section>
+
+  <!-- Journal placeholder -->
+  <section id="journal">
+    <h2>Journal</h2>
+    <p>Coming soon.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Echo Vision Films produces bold, provocative cinema that explores the intersection of power, ambition, and vulnerability. Our mission is to amplify voices and stories that challenge convention and linger long after the credits roll.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries, collaborations, or press, please contact us at <a href="mailto:press@echovisionfilms.com">press@echovisionfilms.com</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Echo Vision Films. All rights reserved.
+  </footer>
+
+</body>
+</html>
